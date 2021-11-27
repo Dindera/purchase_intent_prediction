@@ -1,0 +1,90 @@
+body{
+    background-color: powderblue;
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+h1 {
+    text-align: center;
+    padding-bottom: 20px;
+    font-family: cursive, sans-serif;
+}
+
+h4  {
+    text-decoration-line: underline;
+}
+
+footer {
+    text-align: center;
+    padding-top: 50px;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(16, 71, 122);
+    text-transform: capitalize;
+    font-size: 18px;
+    font-family: "Patrick Hand", cursive;
+  }
+
+a[class^=linkedIn]{
+    color: darkblue;
+    text-transform: none;
+  }
+
+b {
+    color: red;
+}
+
+h3 {
+    font-family: monospace;
+}
+
+label {
+    display: block;
+    font-size: 22px;
+    font-weight: 550;
+    font-family: monospace;
+}
+
+input{
+    border-radius: 5px;
+    padding: 2px;
+    height: 30px;
+    margin-top: 20px;
+  }
+
+  select{
+    border-radius: 7px;
+    padding: 2px;
+    height: 30px;
+    margin-top: 20px; 
+  }
+
+  input[type^="submit"] {
+    border-radius: 5px;
+    font-size: 18px;
+    padding: 2px;
+    height: 35px;
+    width: 80px;
+    align-content: center;
+    background: #26a69a;
+    margin-top: 3px;
+  }
+
+  .submitDiv {
+    text-align: center;
+  }
+
+  .prediction {
+      text-align: center;
+  }
+
+  p{
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+  .formClass{
+      display: flex;
+      justify-content: space-around;
+  }

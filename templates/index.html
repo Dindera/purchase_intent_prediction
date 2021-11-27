@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>PI Model</title>
+        <link type= "text/css"  rel="stylesheet" href="{{url_for('static', filename='styles.css')}}"/>
+    </head>
+    <body>
+        <header></header>
+          <h1>Purchase Intent Prediction Model</h1>
+        <div>
+            <form action="/predict" method="POST" >
+              <div class="formClass">
+              <div>
+              <label for="bounceRate">Bounce Rate:
+              <input type="number" id="bounceRate" name="bounceRate">
+            </label>
+              <label for="convRate">Conversion Rate:
+              <input type="number" id="convRate" name="convRate">
+            </label>
+              <label for="pageviews">Page Views:
+              <input type="number" id="pageviews" name="pageviews">
+            </label>
+              <label for="dailyVisits">Daily Visit Count:
+              <input type="number" id="dailyVisits" name="dailyVisits">
+            </label>
+              <label for="sessionQuality">sessionQualityDim:
+              <input type="number" id="sessionQuality" name="sessionQuality">
+            </label>
+            <label for="actiontype">Action Type:
+                <select id="actiontype" name="actiontype">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                </select>
+              </label>
+        </div>
+            <div>
+              <label for="isclick">Broswer:
+              <select id="browser" name="browser">
+                  <option value="1">Chrome</option>
+                  <option value="2">Safari</option>
+                  <option value="3">Firefox</option>
+                  <option value="4">Internet Explorer</option>
+                  <option value="5">Edge</option>
+                  <option value="0">Other</option>
+              </select>
+            </label>
+              <label for="productClicks">Product Clicks Count:
+              <input type="number" id="productClicks" name="productClicks">
+            </label>
+              <label for="productprice">Product Price:
+              <input type="number" id="productprice" name="productprice">
+            </label>
+              <label for="month">Month:
+              <input type="number" id="month" name="month">
+            </label>
+              <label for="productListPos">Product List Position:
+              <input type="number" id="productListPos" name="productListPos">
+            </label>
+           </div>
+        </div>
+              <br>
+              <div class="submitDiv">
+                <input type="submit" value="Submit">
+              </div>
+              
+            </form>
+            <div class="prediction">
+            <h3> Predicted Label:</h3> <b>{{ prediction }}</b>
+            <h4>Comment About Results</h4>
+            <b>{{ comment }}</b>
+            <p>Probability of Transacting:</p> <b>{{prob1}}</b>
+            <p>Probability of Not Transacting:</p><b>{{prob0}}</b>
+           </div>
+        </div>
+        <footer>
+            <p>Made  by <a class="linkedIn" href="https://www.linkedin.com/in/chideraozoh/" target="_blank">Chidera Ozoh</a></p>
+            <p>For <a href="https://github.com/Dindera/Analyze" target="_blank">Masters Research Study</a></p>
+           </footer>
+    </body>
+</html>
